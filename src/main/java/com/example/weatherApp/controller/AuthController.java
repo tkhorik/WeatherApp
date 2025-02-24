@@ -1,6 +1,6 @@
 package com.example.weatherApp.controller;
 
-import com.example.weatherApp.model.UserAccount;
+import com.example.weatherApp.model.User;
 import com.example.weatherApp.service.UserAuthService;
 import com.example.weatherApp.util.SessionManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ public class AuthController {
     @PostMapping("/signin")
     public String processSignIn(@RequestParam String username, @RequestParam String password, Model model) {
         try {
-            UserAccount user = authService.authenticate(username, password);
+            User user = authService.authenticate(username, password);
             SessionManager.setUser(user);
             return "redirect:/index";
         } catch (RuntimeException e) {
