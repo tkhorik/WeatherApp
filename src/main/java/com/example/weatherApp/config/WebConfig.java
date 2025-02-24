@@ -1,4 +1,4 @@
-package com.example.weatherApp;
+package com.example.weatherApp.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
