@@ -3,12 +3,15 @@ package com.example.weatherApp.config;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class App extends AbstractAnnotationConfigDispatcherServletInitializer {
+
     @Override
-    protected Class<?>[] getRootConfigClasses() { return new Class<?>[] { WebConfig.class }; }
+    protected Class<?>[] getRootConfigClasses() {
+        return new Class<?>[] { WebConfig.class };
+    }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[]{WebConfig.class};
+        return new Class[] { WebConfig.class };
     }
 
     @Override

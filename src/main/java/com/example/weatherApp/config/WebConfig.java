@@ -7,10 +7,9 @@ import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.example") // Change this to your package
+@ComponentScan(basePackages = "com.example.weatherApp") // Change this to your package
 public class WebConfig implements WebMvcConfigurer {
 
     @Override
