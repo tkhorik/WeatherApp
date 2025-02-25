@@ -8,11 +8,11 @@ public class AuthController {
 
     @GetMapping("/register")
     public String showRegistrationPage() {
-        return "registration"; // Refers to registration.html
+        return "registration";
     }
 
     @GetMapping("/login")
     public String showLoginPage() {
-        return "authorization"; // Refers to authorization.html
+        return "authorization";
     }
 }
