@@ -8,7 +8,22 @@ import java.util.List;
 
 @Repository
 public class UserDao {
-    private List<User> users = new ArrayList<>();
+    private List<User> users;
+
+    // Constructor
+    public UserDao() {
+        this.users = new ArrayList<>();
+    }
+
+    // Getter
+    public List<User> getUsers() {
+        return users;
+    }
+
+    // Setter
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
 
     public void saveUser(User user) {
         users.add(user);
