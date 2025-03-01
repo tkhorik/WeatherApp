@@ -18,11 +18,24 @@ public class AuthController {
         this.sessionHolder = sessionHolder;
     }
 
+    /**
+     * Displays the login form.
+     *
+     * @return the name of the login view
+     */
     @GetMapping("/login")
     public String showLoginForm() {
         return "login";
     }
 
+    /**
+     * Handles the login request.
+     *
+     * @param username the username
+     * @param password the password
+     * @param session the HTTP session
+     * @return the redirect URL
+     */
     @PostMapping("/login")
     public String login(@RequestParam String username, @RequestParam String password, HttpSession session) {
         if (userService.authenticate(username, password)) {
@@ -33,6 +46,12 @@ public class AuthController {
         }
     }
 
+    /**
+     * Handles the logout request.
+     *
+     * @param session the HTTP session
+     * @return the redirect URL
+     */
     @GetMapping("/logout")
     public String logout(HttpSession session) {
         sessionHolder.removeSession(session.getId());
