@@ -8,9 +8,6 @@
         <!-- Specify the persistence provider (Hibernate in this case) -->
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-        <!-- Specify the entity classes (or use scanning) -->
-        <class>com.example.weatherApp.model.YourEntityClass</class>
-
         <!-- Configure the database connection -->
         <properties>
             <!--            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>-->

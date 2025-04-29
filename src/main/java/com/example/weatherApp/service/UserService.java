@@ -1,7 +1,7 @@
 package com.example.weatherApp.service;
 
 import com.example.weatherApp.dao.UserDao;
-import com.example.weatherApp.model.User;
+import com.example.weatherApp.entity.User;
 import org.springframework.stereotype.Service;
 
 @Service

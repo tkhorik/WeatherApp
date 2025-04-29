@@ -1,5 +1,6 @@
-package com.example.weatherApp.config;
+package com.example.weatherApp;
 
+import com.example.weatherApp.config.WebConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class App extends AbstractAnnotationConfigDispatcherServletInitializer {

@@ -9,7 +9,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.example.weatherApp") // Change this to your package
+@ComponentScan(basePackages = "com.example.weatherApp")
 public class WebConfig implements WebMvcConfigurer {
 
     @Override

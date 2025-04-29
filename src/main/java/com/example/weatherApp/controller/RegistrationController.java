@@ -1,6 +1,6 @@
 package com.example.weatherApp.controller;
 
-import com.example.weatherApp.model.User;
+import com.example.weatherApp.entity.User;
 import com.example.weatherApp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

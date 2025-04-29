@@ -1,6 +1,6 @@
 package com.example.weatherApp.dao;
 
-import com.example.weatherApp.model.User;
+import com.example.weatherApp.entity.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
