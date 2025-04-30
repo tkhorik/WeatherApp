@@ -2,6 +2,7 @@ package com.example.weatherApp.controller;
 
 import com.example.weatherApp.component.SessionHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import jakarta.servlet.http.HttpSession;
@@ -12,6 +13,12 @@ public class MainController {
 
     public MainController(SessionHolder sessionHolder) {
         this.sessionHolder = sessionHolder;
+    }
+
+    @GetMapping()
+    public String indexPage(Model model) {
+        model.addAttribute("message", "Hello, Spring MVC!");
+        return "index";
     }
 
     @GetMapping("/main")
