@@ -20,13 +20,15 @@
 #    enabled: true
 #    locations: classpath:db/migration
 
+# src/main/resources/application.properties
+  openweathermap.api.key=72f6ad63209d57d0bce611ce5b118206
+  openweathermap.api.url=https://api.openweathermap.org/data/2.5/weather
 
-
-  spring:
-    datasource:
-      url: jdbc:postgresql://localhost:5432/weather_db
-      username: user
-      password: user
-    flyway:
-      enabled: true
-      locations: classpath:db/migration
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/weather_db
+    username: user
+    password: user
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
