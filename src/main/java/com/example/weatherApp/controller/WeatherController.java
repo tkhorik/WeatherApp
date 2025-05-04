@@ -41,7 +41,7 @@ public class WeatherController {
         return ResponseEntity.ok(s);
     }
 
-    //    ****************************************************************gcc
+    //    ****************************************************************
     private final ObjectMapper objectMapper;
 
     @PostMapping("/weather")

@@ -1,0 +1,4 @@
+openweathermap:
+  api:
+    key: your-api-key
+    url: https://api.openweathermap.org/data/2.5/weather
