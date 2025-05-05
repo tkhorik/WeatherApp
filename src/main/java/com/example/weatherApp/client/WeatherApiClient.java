@@ -3,6 +3,7 @@ package com.example.weatherApp.client;
 import com.example.weatherApp.model.WeatherResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
@@ -12,6 +13,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 @Component
+@PropertySource("classpath:application.yml")
 public class WeatherApiClient {
 
     private final ObjectMapper objectMapper;
@@ -28,6 +30,8 @@ public class WeatherApiClient {
 
     public WeatherResponse getWeatherByCity(String city) throws IOException {
         String urlString = String.format("%s?q=%s&appid=%s", baseUrl, city, apiKey);
+//        String urlString = baseUrl + "/city?q=" + "London" + "&appid=" + apiKey;
+        System.out.println(urlString);
         URL url = new URL(urlString);
 
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
