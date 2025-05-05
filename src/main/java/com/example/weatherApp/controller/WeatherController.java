@@ -2,17 +2,17 @@ package com.example.weatherApp.controller;
 
 import com.example.weatherApp.client.ApiRepository;
 import com.example.weatherApp.config.YamlPropertySourceFactory;
-import com.example.weatherApp.dto.WeatherLocationDTO;
 import com.example.weatherApp.model.WeatherResponse;
 import com.example.weatherApp.service.WeatherService;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 
@@ -54,14 +54,4 @@ public class WeatherController {
         model.addAttribute("string", s);
         return ResponseEntity.ok(s);
     }
-
-    private final ObjectMapper objectMapper;
-
-//    @PostMapping("/weather")
-//    public WeatherLocationDTO processWeather(@RequestBody String json) throws JsonProcessingException, IOException, InterruptedException {
-//        // Deserialize JSON to WeatherLocationDTO
-//        String s = apiRepository.fetchWeatherData("Londonsxdksjf");
-//        WeatherLocationDTO weatherLocation = objectMapper.readValue(s, WeatherLocationDTO.class);
-//        return weatherLocation;
-//    }
 }
